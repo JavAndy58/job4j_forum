@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forum</title>
+</head>
+<body>
+<div class="row">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Тема</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="post: ${posts}">
+            <td>
+                <a class="text-dark" th:href="@{|/post/${post.id}|}" th:text="${post.name}"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
